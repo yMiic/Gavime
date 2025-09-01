@@ -1,0 +1,140 @@
+/* Estilo base para celulares */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Estilo para tablets e acima */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* Estilo para desktops grandes */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 40px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Remove os estilos padrão da lista */
+.social-media-links {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Alinha os ícones na horizontal */
+  gap: 15px; /* Adiciona um espaço entre os ícones */
+}
+
+/* Estiliza os links e os ícones */
+.social-media-links li a {
+  display: block;
+  /* Você pode adicionar um tamanho fixo para o ícone */
+  width: 30px; 
+  height: 30px;
+}
+
+.social-media-links img {
+  width: 100%; /* Garante que a imagem preencha o tamanho do seu contêiner (o <a>) */
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.social-media-links li a:hover img {
+  transform: scale(1.1); /* Faz o ícone "crescer" um pouco */
+}
+#testimonials {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #c92c11;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #94939398;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  font-style: italic;
+  color: #c70808cc;
+}
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+  #testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+  }
+
+  .testimonial {
+    margin: 0;
+  }
+}
+/* Estilo para o cabeçalho geral */
+header {
+  background-color: #ffffff; /* Cor de fundo do cabeçalho */
+  padding: 20px;
+}
+
+/* Estilo para o contêiner da logo e do título */
+.logo-container a {
+  display: flex; /* Transforma o link em um container flexível */
+  align-items: center; /* Alinha a logo e o texto verticalmente no centro */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #333; /* Cor do texto do título */
+}
+
+/* Estilo para a imagem da logo */
+.logo-container img {
+  height: 200px; /* Define a altura da logo */
+  margin-right: 15px; /* Adiciona um espaço entre a logo e o título */
+}
+
+/* Estilo para o título */
+.logo-container h1 {
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin: 0; /* Remove margens padrão do h1 */
+}
